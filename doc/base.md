@@ -34,13 +34,57 @@ The CoreModule will be replaced and refactored if necessary.
 	• yarn add @ngrx/effects
 	• yarn add @ngrx/router-store 
 	• yarn add @ngrx/store-devtools  
+	• yarn add ngrx-store-freeze
 	• yarn add @ngrx/db
-	• npm i -D jest
+	
 	
 	• !! check if it still compiles, otherwise find out wht tool needs updating
 	    • npm i -g @angular/cli
 	    • npm i -g yarn
 	    • node.js (mac: sudo n stable)
+
+### Testing
+    • yarn add --dev jest	
+    • yarn add --dev @types/jest
+    • yarn add --dev jest-preset-angular
+
+***package.json***
+
+    scripts: {
+        ...,
+        "test": "jest",
+        "test:watch": "jest --watch"
+    }
+    
+    after *devDependencies*
+    "jest": {
+      "preset": "jest-preset-angular",
+      "setupTestFrameworkScriptFile": "<rootDir>/src/jestSetup.ts"
+    }   
+    
+***src/jestSetup.ts***
+
+    import 'jest-preset-angular';
+    import './jestGlobalMocks';     
+    
+***src/jestGlobalMocks.ts***
+
+    const mock = () => {
+      let storage = {};
+      return {
+        getItem: key => key in storage ? storage[key] : null,
+        setItem: (key, value) => storage[key] = value || '',
+        removeItem: key => delete storage[key],
+        clear: () => storage = {},
+      };
+    };
+    
+    Object.defineProperty(window, 'localStorage', {value: mock()});
+    Object.defineProperty(window, 'sessionStorage', {value: mock()});
+    Object.defineProperty(window, 'getComputedStyle', {
+      value: () => ['-webkit-appearance']
+    });
+
 	    
 ### Material
 	

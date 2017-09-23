@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthReducer undefined action should return state 1`] = `
+Object {
+  "loggedIn": false,
+  "user": null,
+}
+`;
