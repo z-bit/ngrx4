@@ -1,4 +1,8 @@
 import { Action } from '@ngrx/store';
+export interface AuthAction extends Action {
+  type: string;
+  payload?: any;
+}
 import { User } from '../models/user';
 import { Authenticate } from '../models/authenticate';
 
@@ -8,32 +12,32 @@ export const LOGIN_FAILURE = '[Auth] Login Failure';
 export const LOGIN_REDIRECT = '[Auth] Login Redirect';
 export const LOGOUT = '[Auth] Logout';
 
-export class Login implements Action {
+export class Login implements AuthAction {
   readonly type = LOGIN;
   constructor(
     public payload: Authenticate
   ) {}
 }
 
-export class LoginSuccess implements Action {
+export class LoginSuccess implements AuthAction {
   readonly type = LOGIN_SUCCESS;
   constructor(
     public payload: { user: User }
   ) {}
 }
 
-export class LoginFailure implements Action {
+export class LoginFailure implements AuthAction {
   readonly type = LOGIN_FAILURE;
   constructor(
     public payload: any
   ) {}
 }
 
-export class LoginRedirect implements Action {
+export class LoginRedirect implements AuthAction {
   readonly type = LOGIN_REDIRECT;
 }
 
-export class Logout implements Action {
+export class Logout implements AuthAction {
   readonly type = LOGOUT;
 }
 

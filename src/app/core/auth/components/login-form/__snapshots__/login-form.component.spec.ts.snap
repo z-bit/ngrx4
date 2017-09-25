@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login-Page should compile 1`] = `
+<app-login-form
+  form={[Function FormGroup]}
+  submitted={[Function EventEmitter]}
+>
+  <md-card>
+    
+    
+    <md-card-title>
+      Login
+    </md-card-title>
+    
+    
+    <md-card-content>
+      
+      
+      <form
+        class="ng-untouched ng-pristine ng-valid"
+        ng-reflect-form="[object Object]"
+        novalidate=""
+      >
+        
+        
+        <p>
+          
+          
+          <md-input-container>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-valid"
+              formcontrolname="username"
+              mdinput=""
+              ng-reflect-name="username"
+              placeholder="Username"
+              type="text"
+            />
+            
+          
+          </md-input-container>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <md-input-container>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-valid"
+              formcontrolname="password"
+              mdinput=""
+              ng-reflect-name="password"
+              placeholder="Password"
+              type="password"
+            />
+            
+          
+          </md-input-container>
+          
+        
+        </p>
+        
+  
+        
+        
+        
+  
+        
+        <p
+          class="loginButtons"
+        >
+          
+          
+          <button
+            md-button=""
+            type="submit"
+          >
+            Login
+          </button>
+          
+        
+        </p>
+        
+  
+      
+      </form>
+      
+    
+    </md-card-content>
+    
+  
+  </md-card>
+</app-login-form>
+`;
+
+exports[`Login-Page should disable the form if pending 1`] = `
+<app-login-form
+  form={[Function FormGroup]}
+  submitted={[Function EventEmitter]}
+>
+  <md-card>
+    
+    
+    <md-card-title>
+      Login
+    </md-card-title>
+    
+    
+    <md-card-content>
+      
+      
+      <form
+        novalidate=""
+      >
+        
+        
+        <p>
+          
+          
+          <md-input-container>
+            
+            
+            <input
+              formcontrolname="username"
+              mdinput=""
+              placeholder="Username"
+              type="text"
+            />
+            
+          
+          </md-input-container>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <md-input-container>
+            
+            
+            <input
+              formcontrolname="password"
+              mdinput=""
+              placeholder="Password"
+              type="password"
+            />
+            
+          
+          </md-input-container>
+          
+        
+        </p>
+        
+  
+        
+        
+        
+  
+        
+        <p
+          class="loginButtons"
+        >
+          
+          
+          <button
+            md-button=""
+            type="submit"
+          >
+            Login
+          </button>
+          
+        
+        </p>
+        
+  
+      
+      </form>
+      
+    
+    </md-card-content>
+    
+  
+  </md-card>
+</app-login-form>
+`;
+
+exports[`Login-Page should display an error message if provided 1`] = `
+<app-login-form
+  errorMessage={[Function String]}
+  form={[Function FormGroup]}
+  submitted={[Function EventEmitter]}
+>
+  <md-card>
+    
+    
+    <md-card-title>
+      Login
+    </md-card-title>
+    
+    
+    <md-card-content>
+      
+      
+      <form
+        novalidate=""
+      >
+        
+        
+        <p>
+          
+          
+          <md-input-container>
+            
+            
+            <input
+              formcontrolname="username"
+              mdinput=""
+              placeholder="Username"
+              type="text"
+            />
+            
+          
+          </md-input-container>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <md-input-container>
+            
+            
+            <input
+              formcontrolname="password"
+              mdinput=""
+              placeholder="Password"
+              type="password"
+            />
+            
+          
+          </md-input-container>
+          
+        
+        </p>
+        
+  
+        
+        
+        
+  
+        
+        <p
+          class="loginButtons"
+        >
+          
+          
+          <button
+            md-button=""
+            type="submit"
+          >
+            Login
+          </button>
+          
+        
+        </p>
+        
+  
+      
+      </form>
+      
+    
+    </md-card-content>
+    
+  
+  </md-card>
+</app-login-form>
+`;

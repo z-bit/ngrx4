@@ -20,6 +20,6 @@ export class CustomRouterStateSerializer implements RouterStateSerializer<Router
     const { url } = routerState;
     const queryParams = routerState.root.queryParams;
 
-    return {  url, queryParams};
+    return { url, queryParams };
   }
 }
